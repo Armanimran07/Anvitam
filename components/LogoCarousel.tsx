@@ -32,12 +32,12 @@ const LogoCarousel: React.FC = () => {
                             key={`${logo.name}-${index}`}
                             className="flex items-center justify-center px-12 md:px-20 mx-4 group transition-all duration-500"
                         >
-                            {/* Logo Container - Modern Interaction */}
-                            <div className="relative w-32 h-32 md:w-40 md:h-40 flex items-center justify-center filter grayscale opacity-60 transition-all duration-500 ease-out group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110">
+                            {/* Logo Container - Modern Interaction with Card/Badge style */}
+                            <div className="relative w-32 h-32 md:w-40 md:h-40 flex items-center justify-center bg-white rounded-full shadow-sm border border-anvitam-charcoal/5 p-6 transition-all duration-500 ease-out group-hover:shadow-xl group-hover:scale-110 group-hover:border-anvitam-charcoal/10">
                                 <img
                                     src={logo.src}
                                     alt={`${logo.name} logo`}
-                                    className="max-h-full max-w-full object-contain drop-shadow-sm group-hover:drop-shadow-md transition-all duration-500"
+                                    className="max-h-full max-w-full object-contain filter transition-all duration-500"
                                 />
                             </div>
                         </div>
