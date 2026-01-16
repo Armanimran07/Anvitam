@@ -44,12 +44,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     // Updated container to include backdrop blur for "glass" effect over the animated body background
-    <div className="flex flex-col min-h-screen font-sans bg-anvitam-cream/80 backdrop-blur-3xl text-anvitam-charcoal transition-all duration-1000 relative z-10">
+    <div className="flex flex-col min-h-screen font-sans bg-anvitam-cream/80 backdrop-blur-3xl text-anvitam-charcoal transition-all duration-1000 relative z-10 w-full overflow-x-hidden">
       {/* Header - Transparent/Minimal */}
-      <header className="fixed top-0 left-0 right-0 z-[60] bg-anvitam-cream/80 backdrop-blur-md transition-all duration-300 py-3 md:py-4 border-b border-anvitam-green/10">
+      <header className="fixed top-0 left-0 right-0 z-[60] bg-anvitam-cream/80 backdrop-blur-md transition-all duration-300 py-3 md:py-4 border-b border-anvitam-green/10 w-full">
         <div className="max-w-[90%] mx-auto flex items-center justify-between">
           <Link to="/" className="z-[60] hover:opacity-80 transition-opacity flex items-center gap-2 md:gap-3 group" onClick={() => setIsMenuOpen(false)}>
-            
+
             {/* Custom SVG Logo Icon (Leaf Spiral) - Optimized for Mobile */}
             <div className="relative h-10 w-10 md:h-14 md:w-14 animate-float flex-shrink-0">
               <svg viewBox="0 0 100 100" className="w-full h-full overflow-visible">
@@ -60,7 +60,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   <path d="M50 50 Q60 80 50 90 Q40 80 50 50" fill="#4a6741" stroke="#4a6741" strokeWidth="2" className="opacity-90" transform="rotate(144 50 50)" />
                   <path d="M50 50 Q20 60 10 50 Q20 40 50 50" fill="#A0C878" stroke="#A0C878" strokeWidth="2" className="opacity-90" transform="rotate(216 50 50)" />
                   <path d="M50 50 Q30 20 30 10 Q40 30 50 50" fill="#DDEB9D" stroke="#DDEB9D" strokeWidth="2" className="opacity-90" transform="rotate(288 50 50)" />
-                  
+
                   {/* Decorative dots between leaves */}
                   <circle cx="50" cy="25" r="2.5" fill="#2C241B" />
                   <circle cx="75" cy="50" r="2.5" fill="#2C241B" />
@@ -91,7 +91,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </nav>
 
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
             className="md:hidden z-[60] p-2 text-anvitam-charcoal focus:outline-none"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
@@ -100,8 +100,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </button>
 
           {/* Mobile Nav Overlay */}
-          <div 
-            className={`fixed inset-0 bg-anvitam-cream z-[50] flex flex-col items-center justify-center space-y-6 transition-transform duration-500 ease-in-out md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+          <div
+            className={`fixed inset-0 bg-anvitam-cream z-[50] flex flex-col items-center justify-center space-y-6 transition-all duration-500 ease-in-out md:hidden ${isMenuOpen ? 'translate-x-0 opacity-100 visible' : 'translate-x-full opacity-0 invisible'}`}
             style={{ height: '100dvh' }} // Use dynamic viewport height
           >
             {navLinks.map((link) => (
@@ -114,7 +114,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 {link.name}
               </Link>
             ))}
-            
+
             {/* Mobile Footer Info */}
             <div className="mt-8 text-center border-t border-anvitam-charcoal/10 pt-8 w-3/4">
               <p className="text-xs font-bold uppercase tracking-widest text-anvitam-stone mb-2">Get in Touch</p>
@@ -139,18 +139,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <h2 className="text-3xl md:text-7xl font-serif font-medium mb-8 md:mb-12 italic text-anvitam-stone">
             together
           </h2>
-          
+
           <p className="max-w-lg mx-auto text-anvitam-cream/70 mb-8 md:mb-12 leading-relaxed text-sm md:text-base">
             We’re always open to collaborations that inspire. Whether you’re a client, creator, or curious soul — reach out. Let’s imagine and create something beautiful.
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-12">
-             <Link to="/contact" className="text-sm font-bold uppercase tracking-widest border-b border-anvitam-cream pb-1 hover:text-anvitam-blue hover:border-anvitam-blue transition-colors">
-               Start a Project
-             </Link>
-             <a href="mailto:anvitamarchitect@gmail.com" className="text-sm font-bold uppercase tracking-widest border-b border-anvitam-cream pb-1 hover:text-anvitam-blue hover:border-anvitam-blue transition-colors">
-               anvitamarchitect@gmail.com
-             </a>
+            <Link to="/contact" className="text-sm font-bold uppercase tracking-widest border-b border-anvitam-cream pb-1 hover:text-anvitam-blue hover:border-anvitam-blue transition-colors">
+              Start a Project
+            </Link>
+            <a href="mailto:anvitamarchitect@gmail.com" className="text-sm font-bold uppercase tracking-widest border-b border-anvitam-cream pb-1 hover:text-anvitam-blue hover:border-anvitam-blue transition-colors">
+              anvitamarchitect@gmail.com
+            </a>
           </div>
         </div>
 
