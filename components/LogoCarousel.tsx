@@ -7,7 +7,6 @@ const LogoCarousel: React.FC = () => {
         { name: 'SARAYA', src: '/assets/clients/saraya.png' },
         { name: 'BEER BAR', src: '/assets/clients/beerbar.png' },
         { name: 'MOSSARIA', src: '/assets/clients/mossaria.png' },
-        // Add more logos here if needed
     ];
 
     // Tripling the array for seamless infinite loop
