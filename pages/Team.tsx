@@ -8,28 +8,28 @@ const Team: React.FC = () => {
   return (
     <div className="py-12 bg-white min-h-screen animate-fade-in">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12">
-        
+
         {/* Left Col: Image & Contact */}
         <div className="md:col-span-5 sticky top-32 self-start">
-           <ScrollReveal>
-             <div className="relative overflow-hidden aspect-[3/4] mb-8 bg-anvitam-stone">
-                <img 
-                  src={archana?.image || "/founder.jpg"} 
-                  alt="Archana Gavas" 
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.currentTarget.src = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"; // Fallback
-                  }}
-                />
-             </div>
-             <h2 className="text-2xl font-serif text-anvitam-charcoal">Archana Gavas</h2>
-             <p className="text-sm uppercase tracking-widest text-anvitam-green mb-6">Principal Architect, Founder</p>
-             
-             <div className="text-sm text-gray-500 font-mono space-y-2">
-               <p>anvitamarchitect@gmail.com</p>
-               <a href="https://www.linkedin.com/in/archana-gavas/" className="underline hover:text-anvitam-blue">LinkedIn Profile</a>
-             </div>
-           </ScrollReveal>
+          <ScrollReveal>
+            <div className="relative overflow-hidden aspect-[3/4] mb-8 bg-anvitam-stone">
+              <img
+                src={archana?.image || "/founder.jpg"}
+                alt="Archana Gavas"
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.src = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"; // Fallback
+                }}
+              />
+            </div>
+            <h2 className="text-2xl font-serif text-anvitam-charcoal">Archana Gavas</h2>
+            <p className="text-sm uppercase tracking-widest text-anvitam-green mb-6">Principal Architect, Founder</p>
+
+            <div className="text-sm text-gray-500 font-mono space-y-2">
+              <p>anvitamarchitects@gmail.com</p>
+              <a href="https://www.linkedin.com/in/archana-gavas/" className="underline hover:text-anvitam-blue">LinkedIn Profile</a>
+            </div>
+          </ScrollReveal>
         </div>
 
         {/* Right Col: Narrative */}
@@ -37,7 +37,7 @@ const Team: React.FC = () => {
           <div className="prose prose-lg prose-headings:font-serif prose-p:font-serif text-anvitam-charcoal/80">
             <ScrollReveal delay={100}>
               <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-anvitam-blue mb-8">Meet Us</h3>
-              
+
               <p className="text-2xl font-serif italic text-black mb-12">
                 "I didn’t start with a firm. No team. No funding. No roadmap. Just a quiet belief."
               </p>
@@ -48,7 +48,7 @@ const Team: React.FC = () => {
                 <p>
                   As a freelance architect, I wore every hat. From concept to execution, budgeting to supervision. What kept me going was the hope that every space I touched might help someone feel seen, safe, or inspired.
                 </p>
-                
+
                 <p>
                   That belief shaped <strong>Anvitam</strong> — my independent architecture studio, built from the ground up. I’ve led 10+ projects spanning residential architecture, commercial space design, community-driven architecture, and landscape planning. Each one rooted in context, emotion, and honest simplicity.
                 </p>

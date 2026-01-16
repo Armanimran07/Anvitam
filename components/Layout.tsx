@@ -118,7 +118,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             {/* Mobile Footer Info */}
             <div className="mt-8 text-center border-t border-anvitam-charcoal/10 pt-8 w-3/4">
               <p className="text-xs font-bold uppercase tracking-widest text-anvitam-stone mb-2">Get in Touch</p>
-              <a href="mailto:anvitamarchitect@gmail.com" className="text-anvitam-charcoal hover:text-anvitam-blue block font-serif text-lg break-all">anvitamarchitect@gmail.com</a>
+              <a href="mailto:anvitamarchitects@gmail.com" className="text-anvitam-charcoal hover:text-anvitam-blue block font-serif text-lg break-all">anvitamarchitects@gmail.com</a>
             </div>
           </div>
         </div>
@@ -148,8 +148,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <Link to="/contact" className="text-sm font-bold uppercase tracking-widest border-b border-anvitam-cream pb-1 hover:text-anvitam-blue hover:border-anvitam-blue transition-colors">
               Start a Project
             </Link>
-            <a href="mailto:anvitamarchitect@gmail.com" className="text-sm font-bold uppercase tracking-widest border-b border-anvitam-cream pb-1 hover:text-anvitam-blue hover:border-anvitam-blue transition-colors">
-              anvitamarchitect@gmail.com
+            <a href="mailto:anvitamarchitects@gmail.com" className="text-sm font-bold uppercase tracking-widest border-b border-anvitam-cream pb-1 hover:text-anvitam-blue hover:border-anvitam-blue transition-colors">
+              anvitamarchitects@gmail.com
             </a>
           </div>
         </div>
