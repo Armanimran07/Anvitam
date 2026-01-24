@@ -22,6 +22,7 @@ export interface Project {
   specs?: { label: string; value: string }[];
   isFeatured?: boolean;
   story?: StorySection[]; // New: Detailed start-to-finish story
+  modelUrl?: string; // New: 3D Model URL (.glb)
 }
 
 export interface BlogPost {
@@ -83,7 +84,7 @@ export interface Service {
   title: string;
   description: string;
   valueProps: string[];
-  icon: string; 
+  icon: string;
   // New fields for detailed page
   fullDescription?: string;
   process?: ServiceProcess[];
