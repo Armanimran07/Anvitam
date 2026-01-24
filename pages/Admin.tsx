@@ -4,6 +4,8 @@ import { generateContentDescription } from '../services/geminiService';
 import { supabase } from '../services/supabaseClient';
 import { Trash2, Plus, Sparkles, LogOut, BarChart as ChartIcon, FileText, Layout as LayoutIcon, ShoppingBag, Briefcase, MessageSquare, Mail, Loader2, Edit, CheckCircle } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
+import ReactQuill from 'react-quill-new';
+import 'react-quill-new/dist/quill.snow.css';
 
 // Mock Analytics Data (Can also be moved to DB later)
 const ANALYTICS_DATA = [
@@ -597,14 +599,24 @@ const Admin: React.FC = () => {
                   onChange={(e) => setNewItemImage(e.target.value)}
                 />
                 <div className="relative">
-                  <textarea
-                    placeholder="Content / Excerpt"
-                    rows={5}
-                    className="w-full border p-3 outline-none focus:border-black pr-32"
-                    value={newItemDescription}
-                    onChange={(e) => setNewItemDescription(e.target.value)}
-                    required
-                  />
+                  <div className="mb-12">
+                    <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Content</label>
+                    <ReactQuill
+                      theme="snow"
+                      value={newItemDescription}
+                      onChange={setNewItemDescription}
+                      className="bg-white h-64 mb-12"
+                      modules={{
+                        toolbar: [
+                          [{ 'header': [1, 2, 3, false] }],
+                          ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+                          [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                          ['link', 'image'],
+                          ['clean']
+                        ],
+                      }}
+                    />
+                  </div>
                   {!editingId && (
                     <button
                       type="button"
