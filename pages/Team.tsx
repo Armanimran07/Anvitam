@@ -26,7 +26,7 @@ const Team: React.FC = () => {
             <p className="text-sm uppercase tracking-widest text-anvitam-green mb-6">Principal Architect, Founder</p>
 
             <div className="text-sm text-gray-500 font-mono space-y-2">
-              <p>anvitamarchitects@gmail.com</p>
+              <p className="break-all">anvitamarchitects@gmail.com</p>
               <a href="https://www.linkedin.com/in/archana-gavas/" className="underline hover:text-anvitam-blue">LinkedIn Profile</a>
             </div>
           </ScrollReveal>
